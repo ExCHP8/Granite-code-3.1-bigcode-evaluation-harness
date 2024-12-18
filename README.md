@@ -9,7 +9,6 @@ Install [`torch`](https://pytorch.org/get-started/locally/) based on your device
 pip install -e .
 ```
 
-```
 Also make sure you have `git-lfs` installed and are logged in the Hub
 ```
 huggingface-cli login
