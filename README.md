@@ -13,7 +13,7 @@ pip install -e .
 Also make sure you have `git-lfs` installed and are logged in the Hub
 ```
 huggingface-cli login
-````
+```
 
 We use [`accelerate`](https://huggingface.co/docs/accelerate/index) to generate code/text in parallel when multiple GPUs are present (multi-GPU mode). You can configure it using:
 
@@ -29,7 +29,7 @@ This section describes five new tasks added to the bigcode-evaluation-harness fo
 
 ## Tasks Overview
 
-```bash
+```
 The below tasks have been evaluated using gpt-4o's responses as a reference.
 ```
 
