@@ -216,8 +216,8 @@ def check(candidate):
     def process_results(self, generations, references):
         """Evaluate the generated unit tests"""
         for i, (gen, ref) in enumerate(zip(generations, references)):
-            print(f"Generation {i}: {gen}")
-            print(f"Reference {i}: {ref}")
+            #print(f"Generation {i}: {gen}")
+            #print(f"Reference {i}: {ref}")
 
         try:
             # Execute the check function with the generated code

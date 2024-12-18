@@ -257,8 +257,8 @@ def check(candidate):
     def process_results(self, generations, references):
         """Evaluate the generated documentation"""
         for i, (gen, ref) in enumerate(zip(generations, references)):
-            print(f"Generation {i}: {gen}")
-            print(f"Reference {i}: {ref}")
+            #print(f"Generation {i}: {gen}")
+            #print(f"Reference {i}: {ref}")
 
         try:
             exec(self.test_data[0]["test"])
