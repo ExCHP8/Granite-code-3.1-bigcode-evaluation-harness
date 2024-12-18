@@ -405,9 +405,15 @@ def main():
         dumped = json.dumps(results, indent=2)
         if accelerator.is_main_process:
             print(dumped)
-
-        with open(args.metric_output_path, "w") as f:
-            f.write(dumped)
+            
+            for task in task_names:
+                task_results = {
+                    task: results.get(task, {}),
+                    "config": results["config"]
+                }
+                task_output_path = f"evaluation_results_{task}.json"
+                with open(task_output_path, "w") as f:
+                    json.dump(task_results, f, indent=2)
 
 
 if __name__ == "__main__":
