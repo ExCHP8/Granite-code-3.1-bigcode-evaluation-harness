@@ -29,7 +29,10 @@ This section describes five new tasks added to the bigcode-evaluation-harness fo
 ## Tasks Overview
 
 ```
-The below tasks have been evaluated using gpt-4o's responses as a reference.
+NOTE: 
+* The below tasks have been evaluated using gpt-4o's responses as a reference.
+* Model name can be provided as a repo name in Hugging Face hub or a local path.
+* If you want to access the granite-3.1 model from the HF private repository, please request access.
 ```
 
 ### 1. Code Porting (code-porting)
@@ -40,7 +43,7 @@ Tests the model's ability to port code between programming languages while maint
 
 ```bash
 accelerate launch main.py \
-  --model YOUR_MODEL \
+  --model "IBM-OSS-Support/granite-3.1-2b-instruct-r241212a" \
   --tasks code-porting \
   --temperature 0.001 \
   --n_samples 1 \
@@ -67,7 +70,7 @@ Evaluates the ability to refactor traditional Java code into Quarkus-based REST 
 
 ```bash
 accelerate launch main.py \
-  --model YOUR_MODEL \
+  --model "IBM-OSS-Support/granite-3.1-2b-instruct-r241212a" \
   --tasks quarkus-refactoring \
   --temperature 0.001 \
   --n_samples 1 \
@@ -91,7 +94,7 @@ Tests the model's ability to generate comprehensive unit tests for Python code.
 
 ```bash
 accelerate launch main.py \
-  --model YOUR_MODEL \
+  --model "IBM-OSS-Support/granite-3.1-2b-instruct-r241212a" \
   --tasks unittest-generation \
   --temperature 0.001 \
   --n_samples 1 \
@@ -116,7 +119,7 @@ Evaluates the ability to generate comprehensive documentation for Python code.
 
 ```bash
 accelerate launch main.py \
-  --model YOUR_MODEL \
+  --model "IBM-OSS-Support/granite-3.1-2b-instruct-r241212a" \
   --tasks documentation-generation \
   --temperature 0.001 \
   --n_samples 1 \
@@ -140,7 +143,7 @@ Tests the model's ability to identify and fix bugs in Python code.
 
 ```bash
 accelerate launch main.py \
-  --model YOUR_MODEL \
+  --model "IBM-OSS-Support/granite-3.1-2b-instruct-r241212a" \
   --tasks bug-fixing \
   --temperature 0.001 \
   --n_samples 1 \
